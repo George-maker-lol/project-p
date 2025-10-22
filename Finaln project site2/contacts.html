@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang='ru'><head><meta charset='UTF-8'><title>Контакты — Пекарня круассанов</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 24px; color:#222; }
+  h1,h2,h3 { color: #8B5E3C; }
+  .note { background:#f7efe7; border:1px solid #8B5E3C; padding:8px 12px; }
+  .thumbs { list-style:none; padding:0; display:flex; gap:10px; flex-wrap:wrap; }
+  .thumbs li { border:1px solid #ddd; padding:4px; }
+  table.simple { border-collapse:collapse; margin: 10px auto; background: url('assets/table-bg.jpg'); }
+  table.simple td, table.simple th { border:1px solid #cc0000; padding:6px; }
+  .nav-internal a { margin-right: 10px; }
+  .current { font-weight:bold; color:#8B5E3C; }
+</style>
+</head><body>
+<nav style="border-bottom:1px solid #8B5E3C; padding:8px 0; margin-bottom:16px;">
+  <a href="index.html"><img src="assets/logo-small.png" alt="Логотип" style="vertical-align:middle"></a>
+  <span style="margin-left:8px"></span>
+  <a href="index.html">Главная</a> |
+  <a href="menu.html">Меню</a> |
+  <a href="gallery.html">Галерея</a> |
+  <a href="about.html">Кто мы</a> |
+  <a href="contacts.html" class="current">Контакты</a> |
+  <a href="https://www.behance.net/georgeguskov" target="_blank">Behance</a> |
+  <a href="https://hsedesign.ru/designer/5ac5351272e241a69462cf5716598f50" target="_blank">HSE&nbsp;Design</a>
+</nav>
+
+<h1>Контакты</h1>
+<h3>Форма 1: Личные контактные данные</h3>
+<form action="https://httpbin.org/get" method="get" target="_blank">
+  <p>Фамилия: <input type="text" name="last_name" value="Гуськов"></p>
+  <p>Имя: <input type="text" name="first_name" value="Георгий"></p>
+  <p>Группа: <input type="text" name="group" value="ИКБО-00-00"></p>
+  <p>Телефон: <input type="text" name="phone" value="+7(900)000-00-00"></p>
+  <p>E-mail: <input type="text" name="email" value="example@mail.ru"></p>
+  <p>Дата отправки: <input type="date" name="send_date" value="2025-10-22"></p>
+  <p>Пароль: <input type="password" name="password" value="123"></p>
+  <input type="hidden" name="form" value="contacts">
+  <p><input type="submit" value="Отправить"></p>
+</form>
+
+<h3>Форма 2: Заказ/отзыв (оригинальные данные)</h3>
+<form action="https://httpbin.org/get" method="get" target="_blank">
+  <p>Товар: <input type="text" name="product" value="Классический круассан"></p>
+  <p>Количество: <input type="number" name="qty" value="2"></p>
+  <p>Вариант начинки:
+     <label><input type="radio" name="filling" value="classic" checked>классика</label>
+     <label><input type="radio" name="filling" value="choco">шоколад</label>
+     <label><input type="radio" name="filling" value="cheese">сыр</label>
+  </p>
+  <p>Дополнительно:
+     <label><input type="checkbox" name="add_powder" checked>сахарная пудра</label>
+     <label><input type="checkbox" name="add_warm">подогреть</label>
+  </p>
+  <p>Дата получения: <input type="date" name="pickup_date" value="2025-10-22"></p>
+  <p>Пароль заказа: <input type="password" name="order_pass" value="abc"></p>
+  <input type="hidden" name="page_id" value="menu">
+  <input type="hidden" name="function" value="order">
+  <p><input type="submit" value="Отправить"></p>
+</form>
+</body></html>
